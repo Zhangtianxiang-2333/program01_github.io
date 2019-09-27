@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       
+        #logo{
+            width: 870px;
+            height:100px;
+            margin: 0 auto;
+        }
+        .search-form{
+            float: right;
+        }
+        #nav{
+            width: 870px;
+            height: 49px;
+            margin: 0 auto;
+            background-image: url(images/nav.jpg) ;
+           
+        }
+         #nav ul li{
+            list-style-type:none ;
+            float: left;
+            width: 174px;
+            text-align: center;
+            line-height: 49px;
+            background: rgba(0, 0, 0, 0.0) url(images/linkr.gif) no-repeat 0 50%;
+        }
+        #nav ul li:first-child{
+            background: rgba(0, 0, 0, 0.0);
+        }
+        #nav ul li a{
+            font-size: 20px ;
+            text-decoration: none;
+            color:#fff
+        }
+        #nav ul li a:hover{
+            color:#ff0;
+        }
+        #header{
+                width: 870px;
+                height: 325px;
+                margin: 0 auto;
+        }
+        #img{
+            width:870px;
+            height: 325px;
+            overflow:hidden;
+        }
+        #arrow{
+            height: 50px;
+            position: relative;
+            top:-200px; 
+        }
+        #previous,#next{
+            width: 30px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.1);
+            font-size: 40px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #previous{
+            float: left;
+        }
+        #next{
+            float: right;
+        }
+        #circle{
+            height: 40px;
+            position:relative;
+            top:-90px;
+            overflow:hidden;
+            margin: 0 0 0 10px;
+        }
+        #circle h1{
+            height:40px;
+            color:#fff;
+            font-size: 20px;
+            text-align: left;
+            line-height: 40px;
+        }
+        #main{
+            width: 870px;
+            height: 760px;
+            margin: 0 auto ;
+        }
+        #city{
+            width: 290px;
+            height: 490px;
+            background-color: #fff;
+            float: left;
+            margin: 0 0 0 -30px;
+
+        }
+        #city ul{
+            margin:0 auto;
+            border-right: 1px solid #cccccc;
+        }
+        #city ul li{
+            list-style-type: none;
+            font-size:13px;
+            line-height: 25px;
+            color: #666;
+        }
+        #city ul li:hover{
+            color:#000
+        }
+        .hr{
+            margin: 20px 30px 20px 0;
+        }
+        #news{
+            width: 290px;
+            height: 490px;
+            background: #fff;
+            float: left;
+        }
+        #news ul{
+            margin: 0 0 0 20px;
+            border-right: 1px solid #cccccc;
+
+        }
+        #news ul li{
+            list-style-type: none;
+            font-size:12px;
+            line-height: 25px;
+            color: #666;
+        }
+        #news ul li:hover{
+            color:#000;
+        }
+        #news ul li:nth-child(2n){
+            color: #006bc9;
+            font-weight: bolder;
+            font-size:10px
+        }
+        #news ul li:nth-child(2n+1){
+            text-indent: 17px;
+        }
+        #new ul li:last-child{
+            background: rgba(0, 0, 0, 0.0);
+        }
+        #sports{
+            width: 290px;
+            height: 760px;
+            background-color: #fff;
+            float: left;
+            margin: -50px 0 0 0;
+        }
+        #sports ul{
+            margin: 0 0 0 20px;
+        }
+        #sports ul li{
+            list-style-type: none;
+            font-size:13px;
+            line-height: 25px;
+            color: #666;
+        }
+        #sports ul li:hover{
+            color: #000;
+        }
+        #life{
+            width: 580px;
+            height: 300px;
+            background-color: #fff;
+            float: right;
+            margin: -290px 290px 0 0;
+        }
+         #life div{
+            width: 580px;
+            height:280px;
+            margin: 0 auto;
+            border-top: 1px dashed #006bc9 ;
+            border-right: 1px dashed #006bc9 ;
+
+        }
+        #life picture{
+            width: 290px;
+            height: 300px;
+            float: left;
+            margin: 0 auto;
+        } 
+        #life .img{
+            float: right;
+            margin: 0 290px 0 0;
+        }
+        #life ul{
+           float: right;
+            width: 270px;
+            margin: -230px 0 0 0;
+        }
+        #life ul li{
+            list-style-type: none;
+            font-size: 12px;
+            line-height:20px ;
+            color:#666;
+        }
+        #life ul li:hover{
+            color:#000;
+        }
+        #life .ziti1{
+            font-size: 15px;
+            color:#006bc9;
+            font-weight: bold;
+            text-align: center;
+            font-family: "宋体";
+            line-height: 25px;
+        }
+        #life .ziti2{
+            font-size: 13px;
+            color:#666;
+            line-height: 20px;
+            text-indent: 2em;
+        }
+        #footer{
+            width: 870px;
+            height: 150px;
+            margin: 0 auto;
+        }
+        #message ul{
+            width: 870px;
+            height: 100px;
+            margin: -150px 0 0 0;
+            background-color: #fff;
+        }
+        #message ul li{
+            list-style-type: none;
+            font-size:13px;
+            color:#fff;
+            line-height: 25px;
+            text-align: center;
+            font-family: "黑体";
+        }
+    </style>
+
+</head>
+<body>
+    <div id="logo">
+        <img src="images/logo.jpg" alt="" />
+       
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">焦点新闻</a></li>
+            <li><a href="">生活资讯</a></li>
+            <li><a href="">省内新闻</a></li>
+            <li><a href="">读写天地</a></li>
+        </ul>
+    </div>
+    <div id="header">
+        <div id="img">
+            <img src="images/图片2.jpg" alt="" />
+            <img src="images/图片3.jpg" alt="" />
+            <img src="images/图片4.jpg" alt="" />
+            <img src="images/图片5.jpg" alt="" />
+            <img src="images/首页.jpg" alt="" />
+        </div>
+        <div id="arrow">
+            <div id="previous"><</div>
+            <div id="next">></div>
+        </div>
+        <div id="circle">
+            <h1>新年伊始 京杭大运河迎来“春运”高峰</h1>
+            <h1>徐州：云龙湖景区冬景如画</h1>
+            <h1>淮安：航拍洪泽湖日出</h1>
+            <h1>南京明孝陵景区内蜡梅迎寒绽放</h1>
+            <h1>习近平出席中央军委军事工作会议并发表重要讲话</h1>
+        </div>
+    </div>
+    <div id="main">
+        <div id="city">
+            <img src="images/聚焦.jpg" alt="" />
+            <ul>
+                <img src="images/小学生.jpg" alt="" />
+                <li><img src="images/dot.jpg" alt="" />小学生制作“城墙砖”搭建南京城墙</li>
+                <li><img src="images/dot.jpg" alt="" />苏州举办腊八民俗文化节</li>
+                <li><img src="images/dot.jpg" alt="" />江苏省内首部城管行业志在常州发布</li>
+                <li><hr class="hr" /></li> 
+                <li><img src="images/dot.jpg" alt="" />徐宿淮盐铁路双向铺轨里程近半</li>
+                <li><img src="images/dot.jpg" alt="" />江苏省发布海洋经济发展指数</li>
+                <li><img src="images/dot.jpg" alt="" />江苏省发布海洋经济发展指数</li>
+                <li><img src="images/dot.jpg" alt="" />第六届江苏网络文化季成果展在宁举办</li>
+                <li><img src="images/dot.jpg" alt="" />江苏省发布海洋经济发展指数</li> 
+            </ul>
+        </div>
+        <div id="news">
+            <img src="images/焦点.jpg" alt="" />
+            <ul>
+                <img src="images/习近平.jpg" alt="" />
+                <li><img src="images/截图.jpg" alt="" />2019年01月06日04:35</li>
+                <li>党的十九大以来宣传思想文化工作述评</li>
+                <li><img src="images/截图.jpg" alt="" />2019年01月06日04:36</li>
+                <li>央行降准 对小微企业、民企继续加大支持力度</li>
+                <li><img src="images/截图.jpg" alt="" />2019年01月06日04:36</li>
+                <li>长江经济带发展:3年来环境变了 居民收入涨了</li>
+                <li><img src="images/截图.jpg" alt="" />2019年01月06日04:37</li>
+                <li>改革促民生 点滴暖民心</li>
+                <li><img src="images/截图.jpg" alt="" />2019年01月06日04:38</li>
+                <li>杜润生 厉以宁 改革开放40周年专题</li>
+                <li><img src="images/截图.jpg" alt="" />2019年01月06日04:36</li>
+                <li>波兰学者:"一带一路"倡议可从很多角度来解读</li>
+            </ul>
+        </div>
+        <div id="sports">
+            <img src="images/体育.jpg" alt="" />
+            <ul>
+                <img src="images/体育图片.jpg" alt="" />
+                <li><img src="images/dot.jpg" alt="" />第三届中国常州国际运动康复大会开幕</li>
+                <li><img src="images/dot.jpg" alt="" />2018年中国体育健儿共获114个世界冠军</li>
+                <li><img src="images/dot.jpg" alt="" />全国跆拳道道馆挑战赛在江苏无锡市举行</li>
+                <li><img src="images/dot.jpg" alt="" />2018全国壁球锦标赛决战在扬州落幕</li>
+                <li><img src="images/dot.jpg" alt="" />第五届全国大众冰雪季尽显冰雪运动魅力</li>
+                <li><img src="images/dot.jpg" alt="" />盐城市盐都区自行车运动协会成立</li>
+                <li><img src="images/dot.jpg" alt="" />连云港市举行迎新年气排球联谊赛</li>
+
+                <img src="images/生活.jpg" alt="" />
+                <img src="images/京剧.jpg" alt="" />
+                <li><img src="images/dot.jpg" alt="" />一剧恒久远 经典永流传</li>
+                <li><img src="images/dot.jpg" alt="" />江南古城若隐若现宛如仙境</li>
+                <li><img src="images/dot.jpg" alt="" />盐城：绘就美丽宜居乡村新图景</li>
+                <li><img src="images/dot.jpg" alt="" />常州9个宜居示范住区项目惠及9170户</li>
+                <li><img src="images/dot.jpg" alt="" />博众精工，这样“智”造未来</li>
+                <li><img src="images/dot.jpg" alt="" />溱湖八鲜、蟹黄汤包……</li>
+                <li><img src="images/dot.jpg" alt="" />“泰有味”美食上海刮起旋风</li>
+            </ul>
+        </div>
+        <div id="life">
+            <div id="picture">
+                <img src="images/暖新闻.jpg"  />
+                <img src="images/棉鞋阿婆.jpg" class="img" />
+            </div>
+            <ul>
+                <li class="ziti1"> 一场爱的接力！</li>
+                <li class="ziti2">苏州“棉鞋阿婆”做鞋16年 为了养活残疾女儿。一场飞来横祸，伟大母爱为女儿撑起一片天。赵阿婆不幸的遭遇和自立自强的性格，引发了不少人的关注，在大家的帮助下，今年的阿婆的棉鞋很快就要卖光了！</li>
+                <li><img src="images/dot.jpg" alt="" />他跪在玻璃渣上采集指纹</li>
+                <li><img src="images/dot.jpg" alt="" />扬州这位好母亲传承好家风</li>
+                <li><img src="images/dot.jpg" alt="" />一个暖男的“暖心骗局”</li>
+                <li><img src="images/dot.jpg" alt="" />街头遇歹徒 父子挺身而出</li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <img src="images/footer.jig.png" alt="" />
+        <div id="message">
+            <ul>
+                <li>本站不良内容举报信箱：jubao@jschina.com.cn/举报电话：（025）84737000</li>
+                <li>网站简介 |  广告服务 |  网站律师 |  网站地图 |  联系方式</li>
+                <li>中国江苏网(江苏中江网传媒股份有限公司) 版权所有  苏ICP备07000608号</li>
+                <li>国新网许可证3212006001号 视听节目许可证1008318号   广播电视节目制作经营许可证苏字第394号</li>
+                <li>电信业务经营许可证苏B1,B2-20110153</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var n=0;
+         function headerImg(){
+              n++;
+               if (n>$("#circle h1").length-1) {
+                    n=0;
+               }
+                $("#img img").hide();
+                $("#img img").eq(n).fadeIn(500);
+                $("#circle h1").hide();
+                $("#circle h1").eq(n).fadeIn(500)
+        }
+        var interval=setInterval(headerImg,10000);
+        $(document).ready(function() {
+            $("#circle h1").click(function(event) {
+                n=$("#circle h1").index(this);
+                $("#img img").hide();
+                $("#img img").eq(n).fadeIn(500);
+                $("#circle h1").hide();
+                $("#circle h1").eq(n).fadeIn(500)
+            });
+            $("#previous").click(function(event) {
+               n--;
+               if(n<0){
+                    n=$("#circle h1").length-1;
+               }
+               $("#img img").hide();
+                $("#img img").eq(n).fadeIn(500);
+                $("#circle h1").hide();
+                $("#circle h1").eq(n).fadeIn(500)
+            }); 
+            $("#next").click(function(event) {
+               n++;
+               if (n>$("#circle h1").length-1) {
+                    n=0;
+               }
+                $("#img img").hide();
+                $("#img img").eq(n).fadeIn(500);
+                $("#circle h1").hide();
+                $("#circle h1").eq(n).fadeIn(500)
+            });
+        });
+    </script>
+</body>
+</html>
